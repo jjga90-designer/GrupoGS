@@ -6,6 +6,7 @@ export default defineConfig(({ mode }) => {
   // Cast process to any to fix "Property 'cwd' does not exist on type 'Process'" error
   const env = loadEnv(mode, (process as any).cwd(), '');
   return {
+    base: './', // This ensures assets work in any subdirectory
     plugins: [react()],
     define: {
       'process.env.API_KEY': JSON.stringify(env.API_KEY)

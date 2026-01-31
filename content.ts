@@ -81,6 +81,33 @@ export const content = {
       ]
     }
   },
+  technology: {
+    title: "Tecnología",
+    subtitle: "Infraestructura Digital",
+    description: "Nuestra plataforma tecnológica integra recolección, supervisión y auditoría en tiempo real para garantizar la validez de cada dato.",
+    features: [
+      {
+        icon: "Smartphone",
+        title: "Captura Móvil",
+        desc: "Software de encuestas offline con validación lógica, grabación de audio y captura fotográfica integrada."
+      },
+      {
+        icon: "Map",
+        title: "Geolocalización",
+        desc: "Auditoría por GPS en cada encuesta para certificar la cobertura geográfica y la ubicación del personal de campo."
+      },
+      {
+        icon: "Database",
+        title: "Cloud Sync",
+        desc: "Sincronización inmediata de datos a servidores seguros para un monitoreo concurrente del avance de campo."
+      },
+      {
+        icon: "Lock",
+        title: "Seguridad y Respaldo",
+        desc: "Protocolos de encriptación de datos y copias de seguridad automáticas para la protección total de la información."
+      }
+    ]
+  },
   about: {
     badge: "Sobre Nosotros",
     title: {

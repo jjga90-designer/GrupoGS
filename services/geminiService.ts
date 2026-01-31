@@ -1,9 +1,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { AnalysisResult, WebsiteAnalysis, GroundingSource } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const analyzeWebsite = async (url: string): Promise<AnalysisResult> => {
+  // Initialize inside the function to avoid startup crashes if env var is missing
+  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
   const modelId = "gemini-3-flash-preview";
   
   const prompt = `
