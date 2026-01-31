@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Primary Tags -->
+    <title>Grupo GS | Trabajo de Campo en Perú y Latam</title>
+    <meta name="description" content="Empresa líder en recolección de datos, encuestas y estudios de mercado en Perú y Latinoamérica. Servicios de Focus Group, Mystery Shopper y auditoría de campo." />
+    <meta name="keywords" content="Investigación de mercados, Trabajo de campo, Encuestas Perú, Focus Group, Mystery Shopper, Levantamiento de información, Auditoría de PDV, CAPI, CATI, Opinión Pública" />
+    <meta name="author" content="Grupo GS" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.grupogs.com.pe/" />
+    <meta property="og:title" content="Grupo GS | Expertos en Investigación de Mercados" />
+    <meta property="og:description" content="Confianza que inicia el mercado. Recolección de datos precisa y trabajo de campo auditado en Perú y Latinoamérica." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.grupogs.com.pe/" />
+    <meta property="twitter:title" content="Grupo GS | Investigación de Mercados" />
+    <meta property="twitter:description" content="Confianza que inicia el mercado. Recolección de datos precisa y trabajo de campo auditado." />
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" />
+
+    <!-- Structured Data (JSON-LD) for Google Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Grupo GS",
+      "url": "https://www.grupogs.com.pe",
+      "logo": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+      "description": "Expertos en recolección de datos y trabajo de campo para investigación de mercados en Perú y Latinoamérica.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Carlos Tenaud 192",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+51-907-355-103",
+        "contactType": "customer service",
+        "email": "info@grupogs.com.pe",
+        "areaServed": ["PE", "Latam"],
+        "availableLanguage": ["Spanish", "English"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/grupogs",
+        "https://www.linkedin.com/company/grupogs"
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      html {
+        font-size: 16px;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+      }
+      .clip-path-slant {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      }
+
+      /* Entrance Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      .animate-fade-in-up {
+        opacity: 0;
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      .animate-fade-in {
+        opacity: 0;
+        animation: fadeIn 1s ease-out forwards;
+      }
+
+      .delay-100 { animation-delay: 100ms; }
+      .delay-200 { animation-delay: 200ms; }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-500 { animation-delay: 500ms; }
+      .delay-700 { animation-delay: 700ms; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
