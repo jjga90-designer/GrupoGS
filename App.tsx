@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
+import Technology from './components/Technology';
+import RegionalPresence from './components/RegionalPresence';
 import Contact from './components/Contact';
 import { BarChart3, Linkedin, Facebook, Twitter, Mail, MapPin, Phone } from 'lucide-react';
 import { content } from './content';
@@ -16,6 +18,8 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <Services />
+        <Technology />
+        <RegionalPresence />
         <About />
         <Contact />
       </main>

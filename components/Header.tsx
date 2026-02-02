@@ -46,6 +46,7 @@ const Header: React.FC = () => {
     { name: 'Inicio', href: '#inicio' },
     { name: 'Servicios', href: '#servicios' },
     { name: 'Metodologías', href: '#metodologias' },
+    { name: 'Cobertura', href: '#cobertura' },
     { name: 'Nosotros', href: '#nosotros' },
   ];
 
@@ -107,7 +108,9 @@ const Header: React.FC = () => {
             
             <div className="flex items-center gap-3 ml-4">
               <a 
-                href="https://www.grupogs.com.pe"
+                href="https://portal.grupogs.com.pe"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`px-6 py-2.5 text-sm font-bold rounded-full transition-all shadow-lg transform hover:-translate-y-0.5 flex items-center gap-2 ${
                   isScrolled 
                     ? 'bg-[#0F172A] text-white hover:bg-slate-800' 
@@ -162,7 +165,9 @@ const Header: React.FC = () => {
             })}
             <div className="border-t border-slate-100 pt-4 mt-2 flex flex-col gap-3">
               <a 
-                href="https://www.grupogs.com.pe"
+                href="https://portal.grupogs.com.pe"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-700 font-bold uppercase text-sm flex items-center gap-2 hover:text-[#0F172A]"
               >
                 <LogIn className="w-4 h-4" /> Login

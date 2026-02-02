@@ -37,7 +37,7 @@ export const content = {
       status: "Estado en vivo",
       metrics: [
         { label: "Encuestadores Activos", value: "120+" },
-        { label: "Regiones Cubiertas", value: "Regional" },
+        { label: "Regiones Cubiertas", value: "14" },
         { label: "Efectividad Muestral", value: "98.5%" }
       ]
     },
@@ -80,6 +80,26 @@ export const content = {
         { acronym: "Híbrido", name: "Presencial & Online", desc: "Combinamos enfoques para mayor precisión y alcance." }
       ]
     }
+  },
+  regional: {
+    title: "Presencia Regional",
+    description: "Nuestra red de campo se extiende por los principales mercados de Latinoamérica, garantizando estándares unificados en estudios multi-país.",
+    countries: [
+      { name: "Perú", status: "Sede Central", active: true },
+      { name: "México", status: "Operaciones Activas", active: true },
+      { name: "Colombia", status: "Operaciones Activas", active: true },
+      { name: "Chile", status: "Operaciones Activas", active: true },
+      { name: "Argentina", status: "Operaciones Activas", active: true },
+      { name: "Brasil", status: "Operaciones Activas", active: true },
+      { name: "Ecuador", status: "Operaciones Activas", active: true },
+      { name: "Bolivia", status: "Operaciones Activas", active: true },
+      { name: "Panamá", status: "Operaciones Activas", active: true },
+      { name: "Costa Rica", status: "Operaciones Activas", active: true },
+      { name: "Guatemala", status: "Operaciones Activas", active: true },
+      { name: "El Salvador", status: "Operaciones Activas", active: true },
+      { name: "Honduras", status: "Operaciones Activas", active: true },
+      { name: "Venezuela", status: "Operaciones Activas", active: true }
+    ]
   },
   technology: {
     title: "Tecnología",
