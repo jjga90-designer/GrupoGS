@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { Globe2, MapPin } from 'lucide-react';
+import { Globe2, MapPin, Radio, Wifi } from 'lucide-react';
 import { content } from '../content';
 
 const RegionalPresence: React.FC = () => {
@@ -26,74 +26,112 @@ const RegionalPresence: React.FC = () => {
   }, []);
 
   return (
-    <section id="cobertura" ref={sectionRef} className="py-24 bg-slate-50 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+    <section id="cobertura" ref={sectionRef} className="py-24 bg-[#F8FAFC] relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 pointer-events-none">
+         {/* Radial glow only, grid removed */}
+         <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-blue-100/60 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
           
-          {/* Text Content */}
-          <div className={`md:w-1/2 space-y-6 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">
+          {/* Text Content - Colors optimized for Light Background */}
+          <div className={`md:w-5/12 space-y-8 transform transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'}`}>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
               <Globe2 className="h-4 w-4" />
               Cobertura LATAM
             </div>
-            <h2 className="text-4xl font-extrabold text-slate-900 leading-tight">
-              {regional.title}
-            </h2>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              {regional.description}
-            </p>
-            <div className="pt-4">
-              <div className="p-4 bg-white border border-slate-100 rounded-lg shadow-sm inline-block">
-                <p className="text-sm font-semibold text-slate-900">
-                  <span className="text-[#8B1D21] font-bold text-lg">100%</span> Supervisión Centralizada
-                </p>
+            
+            <div>
+              <h2 className="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
+                {regional.title}
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed border-l-4 border-[#8B1D21] pl-6">
+                {regional.description}
+              </p>
+            </div>
+
+            <div className="flex flex-col gap-4 pt-4">
+              {/* Dark Tech Card for Supervision */}
+              <div className="p-5 bg-[#0F172A] border border-white/10 rounded-xl shadow-lg flex items-center gap-4 hover:border-[#8B1D21]/50 hover:shadow-red-900/20 transition-all group cursor-default">
+                <div className="p-3 bg-white/5 rounded-full text-[#8B1D21] group-hover:bg-[#8B1D21] group-hover:text-white transition-colors duration-300">
+                  <Radio className="h-6 w-6 animate-pulse" />
+                </div>
+                <div>
+                  <h4 className="text-white font-bold text-lg">Supervisión Centralizada</h4>
+                  <p className="text-slate-400 text-sm">Control de calidad unificado desde Lima para toda la región.</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Card with Countries */}
-          <div className={`md:w-1/2 w-full transform transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
-            <div className="bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden relative">
-              {/* Decorative Header */}
-              <div className="bg-[#0F172A] p-4 flex justify-between items-center">
-                <span className="text-white font-bold text-sm">Red Operativa</span>
-                <div className="flex gap-2">
-                  <div className="w-2.5 h-2.5 rounded-full bg-red-500"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500"></div>
-                  <div className="w-2.5 h-2.5 rounded-full bg-green-500"></div>
-                </div>
-              </div>
+          {/* High-Tech Map Card - Updated to match Hero 'Panel de Campo' Style */}
+          <div className={`md:w-7/12 w-full transform transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}>
+            <div className="relative group">
               
-              {/* Map Background Hint */}
-              <div className="absolute inset-0 top-16 opacity-5 pointer-events-none">
-                 <svg viewBox="0 0 100 100" className="w-full h-full fill-slate-900">
-                    <path d="M20,50 Q40,10 60,50 T90,50" stroke="currentColor" strokeWidth="2" fill="none" />
-                 </svg>
-              </div>
+              {/* Main Container - Matching Hero Card Style (Shadow + Orb) */}
+              <div className="relative bg-[#0b1121] bg-opacity-95 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden shadow-[0_25px_50px_-12px_rgba(139,29,33,0.5)] group-hover:shadow-[0_35px_60px_-15px_rgba(139,29,33,0.7)] transition-all duration-500">
+                
+                {/* Decorative Orb matching Hero style */}
+                <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#8B1D21] rounded-full opacity-30 blur-3xl pointer-events-none group-hover:opacity-50 transition-opacity duration-700"></div>
 
-              {/* Country List - Updated Grid for more items */}
-              <div className="p-5 grid grid-cols-2 sm:grid-cols-3 gap-3 relative z-10">
-                {regional.countries.map((country, idx) => (
-                  <div 
-                    key={idx}
-                    className="flex items-center gap-2 p-2 rounded-lg hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group cursor-pointer"
-                  >
-                    <div className="p-1.5 bg-slate-100 rounded-full text-slate-600 group-hover:bg-[#8B1D21] group-hover:text-white transition-colors flex-shrink-0">
-                      <MapPin className="h-3.5 w-3.5" />
-                    </div>
-                    <div className="min-w-0">
-                      <h4 className="font-bold text-slate-900 text-[13px] truncate group-hover:text-[#8B1D21] group-hover:translate-x-1 transition-all duration-300">
-                        {country.name}
-                      </h4>
-                      <p className="text-[10px] text-slate-500 truncate">{country.status}</p>
-                    </div>
+                {/* Header of Command Center */}
+                <div className="px-6 py-4 border-b border-white/10 flex justify-between items-center bg-black/20 relative z-10">
+                  <div className="flex items-center gap-2">
+                    <Wifi className="h-4 w-4 text-green-500" />
+                    <span className="text-slate-300 font-mono text-xs uppercase tracking-widest">Network Status: Online</span>
                   </div>
-                ))}
-              </div>
+                  <div className="flex gap-1.5">
+                    {[1,2,3].map(i => <div key={i} className={`w-1 h-1 rounded-full ${i===3 ? 'bg-red-500 animate-ping' : 'bg-slate-600'}`}></div>)}
+                  </div>
+                </div>
 
-              {/* Footer of Card */}
-              <div className="bg-slate-50 px-6 py-3 border-t border-slate-100 text-[10px] text-slate-500 text-center uppercase tracking-wide">
-                Estándares unificados en toda la región
+                {/* Country Grid */}
+                <div className="p-6 lg:p-8 relative z-10">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {regional.countries.map((country, idx) => (
+                      <div 
+                        key={idx}
+                        className="
+                          relative group/item overflow-hidden rounded-lg 
+                          bg-slate-800/40 border border-white/5 
+                          transition-all duration-300 
+                          hover:bg-slate-800/90 
+                          hover:border-[#8B1D21] 
+                          hover:shadow-[0_0_20px_rgba(139,29,33,0.5),inset_0_0_10px_rgba(139,29,33,0.2)]
+                        "
+                      >
+                        <div className="flex items-center gap-3 p-3">
+                          <div className="flex-shrink-0">
+                             <MapPin className={`h-4 w-4 ${country.active ? 'text-[#8B1D21]' : 'text-slate-600'} group-hover/item:scale-110 group-hover/item:text-[#ff4444] transition-all duration-300`} />
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <div className="flex justify-between items-center">
+                              <h4 className="text-slate-200 font-bold text-sm truncate group-hover/item:text-white transition-all group-hover/item:translate-x-1">
+                                {country.name}
+                              </h4>
+                              {country.status === "Sede Central" && (
+                                <span className="h-1.5 w-1.5 rounded-full bg-[#8B1D21] animate-pulse shadow-[0_0_8px_#8B1D21]"></span>
+                              )}
+                            </div>
+                            <p className="text-[10px] text-slate-500 font-mono uppercase truncate group-hover/item:text-slate-400">
+                              {country.status === "Sede Central" ? "HQ LIMA" : "NODE ACTIVE"}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Footer Data Stream */}
+                <div className="bg-black/40 px-6 py-3 border-t border-white/5 flex justify-between items-center text-[10px] font-mono text-slate-500 relative z-10">
+                  <span>LATENCY: 24ms</span>
+                  <span className="text-[#8B1D21]">SYNC: 100%</span>
+                  <span>NODES: {regional.countries.length}</span>
+                </div>
+
               </div>
             </div>
           </div>
