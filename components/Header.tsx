@@ -80,7 +80,7 @@ const Header: React.FC = () => {
               <span className={`text-2xl font-extrabold tracking-tighter leading-none ${isScrolled ? 'text-[#8B1D21]' : 'text-white'}`}>
                 GRUPO GS
               </span>
-              <span className={`text-[9px] font-bold tracking-[0.2em] uppercase ${isScrolled ? 'text-slate-800' : 'text-slate-200'}`}>
+              <span className={`text-[10px] font-bold tracking-[0.2em] uppercase ${isScrolled ? 'text-slate-800' : 'text-slate-200'}`}>
                 Confianza que inicia el mercado
               </span>
             </div>

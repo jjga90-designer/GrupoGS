@@ -115,7 +115,7 @@ const RegionalPresence: React.FC = () => {
                                 <span className="h-1.5 w-1.5 rounded-full bg-[#8B1D21] animate-pulse shadow-[0_0_8px_#8B1D21]"></span>
                               )}
                             </div>
-                            <p className="text-[10px] text-slate-500 font-mono uppercase truncate group-hover/item:text-slate-400">
+                            <p className="text-[11px] text-slate-500 font-mono uppercase truncate group-hover/item:text-slate-400">
                               {country.status === "Sede Central" ? "HQ LIMA" : "NODE ACTIVE"}
                             </p>
                           </div>
@@ -126,7 +126,7 @@ const RegionalPresence: React.FC = () => {
                 </div>
 
                 {/* Footer Data Stream */}
-                <div className="bg-black/40 px-6 py-3 border-t border-white/5 flex justify-between items-center text-[10px] font-mono text-slate-500 relative z-10">
+                <div className="bg-black/40 px-6 py-3 border-t border-white/5 flex justify-between items-center text-[11px] font-mono text-slate-500 relative z-10">
                   <span>LATENCY: 24ms</span>
                   <span className="text-[#8B1D21]">SYNC: 100%</span>
                   <span>NODES: {regional.countries.length}</span>
